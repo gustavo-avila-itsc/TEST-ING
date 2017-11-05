@@ -7,7 +7,7 @@ class Test(unittest.TestCase):
         self.assertTrue(area(2, 3) == 6)
 
     def testsaludar(self):
-        self.assertTrue(saludar("gustavo") == "Hola gustavo")
+        self.assertTrue(saludar("gustavo") == "Hola gustav")
 
     def testsumar(self):
         self.assertTrue(sumar(20, 15) == 34)
