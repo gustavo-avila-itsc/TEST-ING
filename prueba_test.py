@@ -10,7 +10,7 @@ class Test(unittest.TestCase):
         self.assertTrue(saludar("gustavo") == "Hola gustavo")
 
     def testsumar(self):
-        self.assertTrue(sumar(20, 15) == 35)
+        self.assertTrue(sumar(20, 15) == 34)
 	
     def testvalorabsoluto(self):
         self.assertTrue(valorabsoluto(-20) == 20)
