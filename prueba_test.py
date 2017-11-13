@@ -4,19 +4,30 @@ from sut import *
 class Test(unittest.TestCase):
 
     def testarea(self):
-        self.assertTrue(area(2, 3) == 6)
+        self.assertEqual(area(2, 3),6)
 
     def testsaludar(self):
-        self.assertTrue(saludar("gustavo") == "Hola gustavo")
+        self.assertEqual(saludar("gustavo"),"Hola gustavo")
 
     def testsumar(self):
-        self.assertTrue(sumar(20, 15) == 35)
+        self.assertEqual(sumar(20, 15),35)
+
+    def testcomparar(self):
+        self.assertEqual(comparar(3,5),"A menor que B")
+    def testcomparar2(self):
+        self.assertEqual(comparar(5,3),"A mayor que B")
+    def testcomparar3(self):
+        self.assertEqual(comparar(5,5),"A y B son iguales")
+
+
 	
     def testvalorabsoluto(self):
-        self.assertTrue(valorabsoluto(-20) == 20)
-		
+        self.assertEqual(valorabsoluto(-20),20)
+        
+    def testvalorabsoluto2(self):
+        self.assertEqual(valorabsoluto(20),20)
+        
     def testcostototal(self):
-        self.assertTrue(costototal(20, 15) == "El costo total es $35")
-
+        self.assertEqual(costototal(20, 15),"El costo total es $35")
 if __name__ == '__main__':
     unittest.main()
