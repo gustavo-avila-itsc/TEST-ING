@@ -1,4 +1,5 @@
 import math
+from unittest.mock import MagicMock
 
 def area(ancho, alto):
     return ancho * alto

@@ -1,5 +1,7 @@
 import unittest
 from sut import *
+import math
+
 
 class Test(unittest.TestCase):
 
@@ -29,5 +31,15 @@ class Test(unittest.TestCase):
         
     def testcostototal(self):
         self.assertEqual(costototal(20, 15),"El costo total es $35")
+
+    
+    def test_supercalc(self):
+        math.exp=MagicMock(return_value=2)
+        math.sqrt=MagicMock(return_value=2)
+        a=supercalc(3)
+        self.assertTrue(a==2)
+
+
+
 if __name__ == '__main__':
     unittest.main()
